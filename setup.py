@@ -5,7 +5,7 @@ from glob import glob
 from os import environ, pathsep
 
 from setuptools import Extension, setup
-from .version from .version import format_version, meta, ScmVersion
+from .version import format_version, meta, ScmVersion
 
 
 dconv_includes = [
