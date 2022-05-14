@@ -1,10 +1,12 @@
 import platform
 import shlex
+import setuptools_scm
 from glob import glob
 from os import environ, pathsep
 
 from setuptools import Extension, setup
-import setuptools_scm
+from .version from .version import format_version, meta, ScmVersion
+
 
 dconv_includes = [
     dir
