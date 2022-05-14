@@ -5,7 +5,8 @@ from glob import glob
 from os import environ, pathsep
 
 from setuptools import Extension, setup
-from .version import setuptools_scm_version
+from setuptools_scm import get_version
+version = get_version(root='..', relative_to=__file__)
 
 
 dconv_includes = [
@@ -59,8 +60,8 @@ setup(
     ext_modules=[module1],
     setup_requires=['setuptools_scm'],
     use_scm_version={
-        "local_scheme": local_scheme,
-        "write_to": "python/version.h",
-        "write_to_template": version_template,
+        "root": "..",
+        "relative_to": __file__,
+        "local_scheme": "node-and-timestamp"
     },
  )
