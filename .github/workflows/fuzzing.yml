@@ -127,8 +127,5 @@ jobs:
         language: python
         sanitizer: 'coverage'
     - name: Upload coverage to Codecov
-      uses: codecov/codecov-action@v2
-      with:
-        codecov_Token: ${{secrets.CODECOV_TOKEN}}
-        file: coverage.xml        
+      uses: codecov/codecov-action@v2            
  
