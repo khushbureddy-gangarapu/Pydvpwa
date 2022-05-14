@@ -129,6 +129,6 @@ jobs:
     - name: Upload coverage to Codecov
       uses: codecov/codecov-action@v2
       with:
-        codecov_Token: ${{secrets.codecov_Token}}
+        codecov_Token: ${{secrets.CODECOV_TOKEN}}
         file: coverage.xml        
  
