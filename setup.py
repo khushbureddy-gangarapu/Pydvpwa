@@ -4,6 +4,7 @@ from glob import glob
 from os import environ, pathsep
 
 from setuptools import Extension, setup
+import setuptools_scm
 
 dconv_includes = [
     dir
@@ -54,7 +55,6 @@ def local_scheme(version):
 
 setup(
     ext_modules=[module1],
-    use_scm_version=True,
     setup_requires=['setuptools_scm'],
     use_scm_version={
         "local_scheme": local_scheme,
