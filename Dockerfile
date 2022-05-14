@@ -5,7 +5,7 @@ RUN git clone \
 	--branch main \
 	https://github.com/ultrajson/ultrajson.git
  
-RUN pip3 install pyqt5
+
 RUN pip3 install --upgrade pip
 RUN pip3 install hypothesis
 RUN pip3 install lz4 --force
