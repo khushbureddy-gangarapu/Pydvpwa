@@ -8,6 +8,7 @@ on:
       - ".clusterfuzzlite/hypothesis_structured_fuzzer.py"
       
       
+      
 
 jobs:
   run:
@@ -28,6 +29,9 @@ jobs:
       run: |
         pip3 install coverage
         coverage run -m unittest
+        ignore:
+         - "*/tests/*”     
+         
     - name: Upload Coverage to Codecov
       uses: codecov/codecov-action@v2
       with:
