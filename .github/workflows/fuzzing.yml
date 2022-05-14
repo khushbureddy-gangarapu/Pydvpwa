@@ -131,3 +131,15 @@ jobs:
         storage-repo: https://${{ secrets.TOKEN }}@github.com/khushbureddy-gangarapu/khushbureddy-gangarapu.github.io.git
         storage-repo-branch: master   # Optional. Defaults to "main"
         storage-repo-branch-coverage: master  # Optional. Defaults to "gh-pages".
+        
+  Codecov:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - uses: codecov/codecov-action@v2
+      with:
+        files: ./coverage.html # optional
+        
+        name: codecov-umbrella # optional
+        fail_ci_if_error: true # optional (default = false)
+        verbose: true # optional (default = false)
