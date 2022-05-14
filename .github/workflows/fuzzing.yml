@@ -126,26 +126,9 @@ jobs:
         mode: 'coverage'
         language: python
         sanitizer: 'coverage'
-        # Optional but recommended.
-        # See later section on "Git repo for storage".
-        storage-repo: https://${{ secrets.TOKEN }}@github.com/khushbureddy-gangarapu/khushbureddy-gangarapu.github.io.git
-        storage-repo-branch: master   # Optional. Defaults to "main"
-        storage-repo-branch-coverage: master  # Optional. Defaults to "gh-pages".
-        
-  CodeCov:
-       runs-on: ubuntu-latest
-       steps:
-        - name: Checkout
-          uses: actions/checkout@v2
-        - name: Set up Python 3.9
-          uses: actions/setup-python@v2
-          with:
-              python-version: 3.8
-        - name: Install dependencies
-          run: pip install coverage
-        - name: Run tests and collect coverage
-          run: |
-              coverage run hypothesis_structured_fuzzer.py
-              coverage xml
-        - name: Upload coverage to Codecov
-          uses: codecov/codecov-action@v2 
+    - name: Upload coverage to Codecov
+      uses: codecov/codecov-action@v2
+      with:
+        codecov_Token: ${{secrets.codecov_Token}}
+        file: coverage.xml        
+ 
