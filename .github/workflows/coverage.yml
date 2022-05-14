@@ -8,14 +8,10 @@ on:
       - ".clusterfuzzlite/hypothesis_structured_fuzzer.py"
       
       
-      
 
 jobs:
   run:
     runs-on: ubuntu-latest
-    env:
-      OS: ubuntu-latest
-      PYTHON: '3.9'
     steps:
     - uses: actions/checkout@v2
       with:
@@ -24,7 +20,7 @@ jobs:
     - name: Setup Python
       uses: actions/setup-python@master
       with:
-        python-version: 3.7
+        python-version: 3.8
     - name: Generate Report
       run: |
         pip3 install coverage
