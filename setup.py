@@ -54,9 +54,9 @@ def local_scheme(version):
 
 setup(
     ext_modules=[module1],
-    use_scm_version={
-        "local_scheme": local_scheme,
-        "write_to": "python/version.h",
-        "write_to_template": version_template,
-    },
-)
+    use_scm_version=True,
+    setup_requires=['setuptools_scm'],
+    "local_scheme": local_scheme,
+    "write_to": "python/version.h",
+    "write_to_template": version_template
+    )
