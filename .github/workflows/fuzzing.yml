@@ -97,7 +97,7 @@ jobs:
       with:
         language: python
         github-token: ${{ secrets.TOKEN }}
-        fuzz-seconds: 200
+        fuzz-seconds: 600
         mode: 'prune'
         # Optional but recommended.
         # See later section on "Git repo for storage".
@@ -122,7 +122,7 @@ jobs:
       uses: google/clusterfuzzlite/actions/run_fuzzers@v1
       with:
         github-token: ${{ secrets.TOKEN }}
-        fuzz-seconds: 200
+        fuzz-seconds: 600
         mode: 'coverage'
         language: python
         sanitizer: 'coverage'
