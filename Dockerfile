@@ -5,7 +5,6 @@ RUN git clone \
 	--branch main \
 	https://github.com/ultrajson/ultrajson.git
  
-RUN apt-get install qtbase5-dev
 RUN pip3 install pyqt5
 RUN pip3 install --upgrade pip
 RUN pip3 install hypothesis
