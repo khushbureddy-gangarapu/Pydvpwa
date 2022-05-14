@@ -66,5 +66,6 @@ if __name__ == "__main__":
     # and minimize any failures discovered by earlier runs or by OSS-Fuzz, or
     # briefly search for new failures if none are known.
     # Or, when running via OSS-Fuzz, we'll execute it via the fuzzing hook:
+    atheris.instrument_all()
     atheris.Setup(sys.argv, atheris.instrument_func(test_ujson_roundtrip.hypothesis.fuzz_one_input))
     atheris.Fuzz()
