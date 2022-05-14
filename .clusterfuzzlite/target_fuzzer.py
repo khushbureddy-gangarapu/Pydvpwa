@@ -50,7 +50,7 @@ def main():
   # Since everything interesting in this fuzzer is in native code, we can
   # disable Python coverage to improve performance and reduce coverage noise.
   atheris.instrument_all()  
-  atheris.Setup(sys.argv, TestOneInput, enable_python_coverage=true)
+  atheris.Setup(sys.argv, TestOneInput)
   atheris.Fuzz()
 
 
