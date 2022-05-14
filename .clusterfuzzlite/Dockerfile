@@ -7,6 +7,7 @@ RUN git clone \
   
 RUN pip3 install --upgrade pip
 RUN pip3 install hypothesis
+RUN pip3 install ujson
 RUN pip3 install lz4 --force
 RUN pip3 install idna --force
 RUN pip3 install atheris --force
