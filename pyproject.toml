@@ -1,5 +1,6 @@
 [build-system]
 requires = ["setuptools>=42", "setuptools_scm[toml]>=3.4"]
+requires = ["setuptools @ git+https://github.com/pypa/setuptools.git@main"]
 
 [tool.black]
 target_version = ["py37"]
