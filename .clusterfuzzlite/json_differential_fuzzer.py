@@ -86,6 +86,7 @@ def TestOneInput(input_bytes):
 
 
 def main():
+  atheris.instrument_all()  
   atheris.Setup(sys.argv, TestOneInput)
   atheris.Fuzz()
 
