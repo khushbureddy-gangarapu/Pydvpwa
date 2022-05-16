@@ -67,7 +67,7 @@ jobs:
        with:
         github-token: ${{ secrets.TOKEN }}
         language: python
-        fuzz-seconds: 200
+        fuzz-seconds: 800
         mode: 'batch'
         dry-run: false
         report-unreproducible-crashes: true
@@ -97,7 +97,7 @@ jobs:
       with:
         language: python
         github-token: ${{ secrets.TOKEN }}
-        fuzz-seconds: 600
+        fuzz-seconds: 800
         mode: 'prune'
         # Optional but recommended.
         # See later section on "Git repo for storage".
@@ -122,7 +122,7 @@ jobs:
       uses: google/clusterfuzzlite/actions/run_fuzzers@v1
       with:
         github-token: ${{ secrets.TOKEN }}
-        fuzz-seconds: 600
+        fuzz-seconds: 800
         mode: 'coverage'
         language: python
         sanitizer: 'coverage'
